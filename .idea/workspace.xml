@@ -16,12 +16,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22872d6d-254f-41cc-a3ba-4a636f7879ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sdk.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +180,7 @@
       <workItem from="1604631899697" duration="259000" />
       <workItem from="1604632178227" duration="3592000" />
       <workItem from="1604642741470" duration="2547000" />
-      <workItem from="1604645321176" duration="6573000" />
+      <workItem from="1604645321176" duration="7790000" />
     </task>
     <servers />
   </component>
@@ -201,6 +197,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="WindowStateProjectService">
     <state x="221" y="0" key="#CLI_Interpreters" timestamp="1604681051962">
@@ -227,6 +226,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1604683023230" />
+    <state x="520" y="239" key="Github.ShareDialog" timestamp="1604683902880">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="520" y="239" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1604683902880" />
+    <state x="283" y="39" key="Github.UntrackedFilesDialog" timestamp="1604683930427">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="283" y="39" key="Github.UntrackedFilesDialog/0.0.1280.680@0.0.1280.680" timestamp="1604683930427" />
     <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1604682463615">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -255,6 +262,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1604683365151" />
+    <state x="271" y="67" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1604683541677">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="271" y="67" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1280.680@0.0.1280.680" timestamp="1604683541677" />
     <state x="297" y="151" key="run.anything.popup" timestamp="1604643107022">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

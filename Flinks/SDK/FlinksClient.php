@@ -56,32 +56,6 @@ class FlinksClient
         $this->AuthToken = null;
     }
 
-    public function foo()
-    {
-        $instance = $this->GetInstance();
-        $customerId = $this->GetCustomerId();
-
-        $client = new Client([
-            // Base URI is used with relative requests
-            'base_uri' => "https://{$instance}-api.private.fin.ag/v3/{$customerId}",
-            //'verify' => false,
-        ]);
-
-        $response = $client->request('POST', '/BankingServices/GetAccountsDetail', [
-            'json' => [
-                'LoginId' => 'fd8537cd-0118-4a2b-c4ad-08d6b6ae68da',
-                'MostRecentCached' => true
-            ]
-        ]);
-
-        //get status code using $response->getStatusCode();
-
-        $body = $response->getBody();
-        $arr_body = json_decode($body);
-        print_r($arr_body);
-        return($response);
-    }
-
     /**
      * @param string            $secret_key
      *
@@ -114,6 +88,15 @@ class FlinksClient
         return($response);
     }
 
+    /**
+     * @param string            $institution
+     * @param string            $username
+     * @param string            $password
+     * @param bool              $mostRecentCached
+     * @param bool              $save
+     *
+     * @return AuthorizeResult|null
+     */
     public function Authorize($institution, $username, $password, $mostRecentCached, $save)
     {
         //$instance = $this->GetInstance();
@@ -142,6 +125,11 @@ class FlinksClient
         return($response);
     }
 
+    /**
+     * @param string            $loginId
+     *
+     * @return AuthorizeResult|null
+     */
     public function AuthorizeWithLoginId($loginId)
     {
         $client = new Client([
@@ -166,11 +154,7 @@ class FlinksClient
 }
 
 //tests
-/*$a = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "toolbox");
-$b = $a->foo();
-print_r($b->getStatusCode());
-print_r($b->getReasonPhrase());
-
+/*
 $client1 = new FlinksClient("00000000-0000-0000-0000-000000000000", "demo");
 $status = $client1->GenerateAuthorizeToken("TheSecretKey");
 print_r($status->getStatusCode());
