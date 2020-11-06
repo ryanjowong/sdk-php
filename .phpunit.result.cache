@@ -1,0 +1,1 @@
+C:37:"PHPUnit\Runner\DefaultTestResultCache":316:{a:2:{s:7:"defects";a:3:{s:25:"FlinksClientTest::testFoo";i:4;s:32:"Flinks\FlinksClientTest::testFoo";i:4;s:37:"Flinks\Test\FlinksClientTest::testFoo";i:4;}s:5:"times";a:3:{s:25:"FlinksClientTest::testFoo";d:0.003;s:32:"Flinks\FlinksClientTest::testFoo";d:0.035;s:37:"Flinks\Test\FlinksClientTest::testFoo";d:0.004;}}}
