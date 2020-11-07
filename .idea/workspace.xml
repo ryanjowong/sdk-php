@@ -6,18 +6,32 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
     </expand>
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22872d6d-254f-41cc-a3ba-4a636f7879ff" name="Default Changelist" comment="">
+    <list default="true" id="22872d6d-254f-41cc-a3ba-4a636f7879ff" name="Default Changelist" comment="Removed foo function">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,9 +97,9 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/php_xdebug-3.0.0beta1-7.2-vc15-nts-x86_64.dll" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -93,54 +107,29 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rjowong\PhpstormProjects\sdk\Flinks\Test" />
       <recent name="C:\Users\rjowong\PhpstormProjects\sdk\Flinks\SDK" />
+      <recent name="C:\Users\rjowong\PhpstormProjects\sdk\Flinks" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\rjowong\PhpstormProjects\sdk" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Built-in Web Server.Flinks">
-    <configuration name="FlinksClientTest (1)" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <CommandLine>
-        <PhpTestInterpreterSettings>
-          <option name="interpreterName" value="PHP 7.4" />
-        </PhpTestInterpreterSettings>
-      </CommandLine>
+  <component name="RunManager" selected="PHP Script.FlinksClient">
+    <configuration name="FlinksClientTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Flinks\FlinksClientTest" file="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="FlinksClientTest (2)" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <CommandLine>
-        <PhpTestInterpreterSettings>
-          <option name="interpreterName" value="PHP 7.4" />
-        </PhpTestInterpreterSettings>
-      </CommandLine>
-      <TestRunner class="Flinks\Test\FlinksClientTest" file="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="FlinksClientTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <CommandLine>
-        <PhpTestInterpreterSettings>
-          <option name="interpreterName" value="PHP 7.4" />
-        </PhpTestInterpreterSettings>
-      </CommandLine>
-      <TestRunner class="FlinksClientTest" file="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="FlinksClientTest.testFoo" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Flinks\Test\FlinksClientTest" file="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" method="testFoo" scope="Method" />
+    <configuration name="FlinksClientTest.testGenerateAuthorizeToken" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Flinks\FlinksClientTest" file="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" method="testGenerateAuthorizeToken" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="Flinks" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$/Flinks/SDK" port="8000" router_script="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php" use_router_script="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="Unnamed" type="PhpHttpRequestRunConfigurationType" factoryName="PHP HTTP Request" nameIsGenerated="true">
       <method v="2" />
     </configuration>
     <configuration name="FlinksClient" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php">
@@ -153,18 +142,13 @@
     </configuration>
     <list>
       <item itemvalue="PHP Built-in Web Server.Flinks" />
-      <item itemvalue="PHP HTTP Request.Unnamed" />
       <item itemvalue="PHP Script.FlinksClient" />
       <item itemvalue="PHPUnit.FlinksClientTest" />
-      <item itemvalue="PHPUnit.FlinksClientTest.testFoo" />
-      <item itemvalue="PHPUnit.FlinksClientTest (1)" />
-      <item itemvalue="PHPUnit.FlinksClientTest (2)" />
+      <item itemvalue="PHPUnit.FlinksClientTest.testGenerateAuthorizeToken" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.FlinksClientTest (1)" />
-        <item itemvalue="PHPUnit.FlinksClientTest (2)" />
-        <item itemvalue="PHPUnit.FlinksClientTest.testFoo" />
+        <item itemvalue="PHPUnit.FlinksClientTest.testGenerateAuthorizeToken" />
         <item itemvalue="PHPUnit.FlinksClientTest" />
       </list>
     </recent_temporary>
@@ -180,8 +164,18 @@
       <workItem from="1604631899697" duration="259000" />
       <workItem from="1604632178227" duration="3592000" />
       <workItem from="1604642741470" duration="2547000" />
-      <workItem from="1604645321176" duration="7790000" />
+      <workItem from="1604645321176" duration="8996000" />
+      <workItem from="1604689474476" duration="11911000" />
+      <workItem from="1604722079470" duration="7676000" />
     </task>
+    <task id="LOCAL-00001" summary="Removed foo function">
+      <created>1604685101610</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604685101610</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,23 +191,26 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="Removed foo function" />
+    <MESSAGE value="Made some changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made some changes" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="221" y="0" key="#CLI_Interpreters" timestamp="1604681051962">
+    <state x="221" y="0" key="#CLI_Interpreters" timestamp="1604729510483">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="221" y="0" key="#CLI_Interpreters/0.0.1280.680@0.0.1280.680" timestamp="1604681051962" />
-    <state x="221" y="0" key="#Test_Frameworks" timestamp="1604632471607">
+    <state x="221" y="0" key="#CLI_Interpreters/0.0.1280.680@0.0.1280.680" timestamp="1604729510483" />
+    <state x="221" y="0" key="#Test_Frameworks" timestamp="1604721256564">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="221" y="0" key="#Test_Frameworks/0.0.1280.680@0.0.1280.680" timestamp="1604632471607" />
-    <state x="87" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604678864706">
+    <state x="221" y="0" key="#Test_Frameworks/0.0.1280.680@0.0.1280.680" timestamp="1604721256564" />
+    <state x="141" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604729171313">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="87" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1604678864706" />
+    <state x="141" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1604729171313" />
     <state x="418" y="253" width="444" height="264" key="ComposerInitDialogKey" timestamp="1604632420772">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -222,10 +219,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="538" y="91" key="EnvironmentVariablesDialog/0.0.1280.680@0.0.1280.680" timestamp="1604643710112" />
-    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1604683023230">
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1604729501925">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1604683023230" />
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1604729501925" />
     <state x="520" y="239" key="Github.ShareDialog" timestamp="1604683902880">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -234,22 +231,38 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="283" y="39" key="Github.UntrackedFilesDialog/0.0.1280.680@0.0.1280.680" timestamp="1604683930427" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1604682463615">
+    <state width="1237" height="204" key="GridCell.Tab.0.bottom" timestamp="1604730014185">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604682463615" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1604682463615">
+    <state width="1237" height="204" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604730014185" />
+    <state width="1237" height="204" key="GridCell.Tab.0.center" timestamp="1604730014184">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1604682463615" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1604682463614">
+    <state width="1237" height="204" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1604730014184" />
+    <state width="1237" height="204" key="GridCell.Tab.0.left" timestamp="1604730014184">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1604682463614" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1604682463615">
+    <state width="1237" height="204" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1604730014184" />
+    <state width="1237" height="204" key="GridCell.Tab.0.right" timestamp="1604730014184">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1604682463615" />
+    <state width="1237" height="204" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1604730014184" />
+    <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1604730014185">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604730014185" />
+    <state width="1237" height="204" key="GridCell.Tab.1.center" timestamp="1604730014185">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1604730014185" />
+    <state width="1237" height="204" key="GridCell.Tab.1.left" timestamp="1604730014185">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1604730014185" />
+    <state width="1237" height="204" key="GridCell.Tab.1.right" timestamp="1604730014185">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1604730014185" />
     <state x="443" y="64" key="NewPhpClassDialog" timestamp="1604632291335">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -258,17 +271,33 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1604631921929" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1604683365151">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1604729522909">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1604683365151" />
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1604729522909" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1604685106207">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1604685106207" />
     <state x="271" y="67" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1604683541677">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="271" y="67" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1280.680@0.0.1280.680" timestamp="1604683541677" />
-    <state x="297" y="151" key="run.anything.popup" timestamp="1604643107022">
+    <state x="194" y="70" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1604729288877">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1604643107022" />
+    <state x="194" y="70" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1280.680@0.0.1280.680" timestamp="1604729288877" />
+    <state x="0" y="0" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog" timestamp="1604729549481">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="0" y="0" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog/0.0.1280.680@0.0.1280.680" timestamp="1604729549481" />
+    <state x="425" y="58" width="657" height="606" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1604722602059">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="425" y="58" width="657" height="606" key="com.jetbrains.php.test.PhpNewTestDialog/0.0.1280.680@0.0.1280.680" timestamp="1604722602059" />
+    <state x="297" y="151" key="run.anything.popup" timestamp="1604703928390">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1604703928390" />
   </component>
 </project>
