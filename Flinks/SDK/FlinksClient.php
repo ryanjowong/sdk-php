@@ -89,7 +89,7 @@ class FlinksClient
         return($arr_body);
     }
 
-    public function AuthorizeWithLoginId(string $loginId): self
+    public function AuthorizeWithLoginId(string $loginId): array
     {
         $client = new Client([
             'base_uri' => "https://{$this->GetInstance()}-api.private.fin.ag/v3/{$this->GetCustomerId()}",
