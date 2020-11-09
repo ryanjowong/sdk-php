@@ -24,15 +24,14 @@ class FlinksClient
         return $this->Instance;
     }
 
-    public function GetAuthToken(): string
+    public function GetAuthToken(): ?string
     {
         return $this->AuthToken;
     }
 
-    public function SetAuthToken(string $AuthToken = null): string
+    public function SetAuthToken(string $AuthToken): void
     {
         $this->AuthToken = $AuthToken;
-        return $this;
     }
 
     public function __construct(string $customerId, string $instance)
@@ -42,36 +41,37 @@ class FlinksClient
         $this->AuthToken = null;
     }
 
-    public function GenerateAuthorizeToken(string $secret_key): array
+    public function GenerateAuthorizeToken(string $secret_key): Object
     {
         $client = new Client([
-            "base_uri" => "https://{$this->GetInstance()}-api.private.fin.ag/v3/{$this->GetCustomerId()}",
+            "base_uri" => "https://{$this->GetInstance()}-api.private.fin.ag/v3/{$this->GetCustomerId()}/",
         ]);
 
-        $response = $client->request('POST', '/BankingServices/GenerateAuthorizeToken', [
+        $response = $client->request('POST', 'BankingServices/GenerateAuthorizeToken', [
             "headers" => [
                 'flinks-auth-key' => $secret_key
             ]
         ]);
 
         $body = $response->getBody();
-        $arr_body = json_decode($body);
+        $object_body = json_decode($body);
+        $array_body = (array) json_decode($body);
 
         if($response->getStatusCode() == 200)
         {
-            $this->SetAuthToken($arr_body["Token"]);
+            $this->SetAuthToken($array_body["Token"]);
         }
 
-        return($arr_body);
+        return($object_body);
     }
 
-    public function Authorize(string $institution, string $username, string $password, bool $mostRecentCached, bool $save): array
+    public function Authorize(string $institution, string $username, string $password, bool $mostRecentCached, bool $save): Object
     {
         $client = new Client([
-            'base_uri' => "https://{$this->GetInstance()}-api.private.fin.ag/v3/{$this->GetCustomerId()}",
+            'base_uri' => "https://{$this->GetInstance()}-api.private.fin.ag/v3/{$this->GetCustomerId()}/",
         ]);
 
-        $response = $client->request('POST', '/BankingServices/Authorize', [
+        $response = $client->request('POST', 'BankingServices/Authorize', [
             "headers" => [
                 "Content-Type" => "application/json"
             ],
@@ -85,17 +85,17 @@ class FlinksClient
         ]);
 
         $body = $response->getBody();
-        $arr_body = json_decode($body);
-        return($arr_body);
+        $object_body = json_decode($body);
+        return($object_body);
     }
 
-    public function AuthorizeWithLoginId(string $loginId): array
+    public function AuthorizeWithLoginId(string $loginId): Object
     {
         $client = new Client([
-            'base_uri' => "https://{$this->GetInstance()}-api.private.fin.ag/v3/{$this->GetCustomerId()}",
+            'base_uri' => "https://{$this->GetInstance()}-api.private.fin.ag/v3/{$this->GetCustomerId()}/",
         ]);
 
-        $response = $client->request('POST', '/BankingServices/Authorize', [
+        $response = $client->request('POST', 'BankingServices/Authorize', [
             "headers" => [
                 "Content-Type" => "application/json"
             ],
@@ -106,17 +106,22 @@ class FlinksClient
         ]);
 
         $body = $response->getBody();
-        $arr_body = json_decode($body);
-        return($arr_body);
+        $object_body = json_decode($body);
+        return($object_body);
     }
 }
 
 //tests
 
 $client1 = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "demo");
-$client1->GenerateAuthorizeToken("TheSecretKey");
+$response1 = $client1->GenerateAuthorizeToken("TheSecretKey");
+print_r($response1);
 
-//$client2 = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "toolbox");
-//$status2 = $client2->Authorize("FlinksCapital", "Greatday", "Everyday", false, true);
-//print_r($status2);
+$client2 = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "toolbox");
+$response2 = $client2->Authorize("FlinksCapital", "Greatday", "Everyday", false, true);
+print_r($response2);
+
+//$client3 = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "toolbox");
+//$response3 = $client3->AuthorizeWithLoginId("");
+//print_r($response3);
 

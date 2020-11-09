@@ -19,12 +19,16 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22872d6d-254f-41cc-a3ba-4a636f7879ff" name="Default Changelist" comment="Removed foo function" />
+    <list default="true" id="22872d6d-254f-41cc-a3ba-4a636f7879ff" name="Default Changelist" comment="Removed foo function">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +103,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -112,7 +116,7 @@
       <recent name="C:\Users\rjowong\PhpstormProjects\sdk" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.FlinksClient">
+  <component name="RunManager" selected="PHP Built-in Web Server.Flinks">
     <configuration name="FlinksClientTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Flinks\FlinksClientTest" file="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" scope="Class" />
       <method v="2" />
@@ -159,6 +163,10 @@
       <workItem from="1604645321176" duration="8996000" />
       <workItem from="1604689474476" duration="11911000" />
       <workItem from="1604722079470" duration="7901000" />
+      <workItem from="1604730326500" duration="740000" />
+      <workItem from="1604774138588" duration="425000" />
+      <workItem from="1604941511027" duration="5191000" />
+      <workItem from="1604951645252" duration="937000" />
     </task>
     <task id="LOCAL-00001" summary="Removed foo function">
       <created>1604685101610</created>
@@ -174,7 +182,21 @@
       <option name="project" value="LOCAL" />
       <updated>1604730208601</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Made some changes">
+      <created>1604730500584</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1604730500584</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Made some changes">
+      <created>1604730816232</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604730816232</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,7 +207,24 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -206,10 +245,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="221" y="0" key="#Test_Frameworks/0.0.1280.680@0.0.1280.680" timestamp="1604721256564" />
-    <state x="141" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604729171313">
+    <state x="141" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604774303968">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="141" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1604729171313" />
+    <state x="141" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1604774303968" />
     <state x="418" y="253" width="444" height="264" key="ComposerInitDialogKey" timestamp="1604632420772">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -222,30 +261,30 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1604729501925" />
-    <state x="520" y="239" key="Github.ShareDialog" timestamp="1604683902880">
+    <state x="520" y="239" key="Github.ShareDialog" timestamp="1604730923745">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="520" y="239" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1604683902880" />
+    <state x="520" y="239" key="Github.ShareDialog/0.0.1280.680@0.0.1280.680" timestamp="1604730923745" />
     <state x="283" y="39" key="Github.UntrackedFilesDialog" timestamp="1604683930427">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="283" y="39" key="Github.UntrackedFilesDialog/0.0.1280.680@0.0.1280.680" timestamp="1604683930427" />
-    <state width="1237" height="204" key="GridCell.Tab.0.bottom" timestamp="1604730285691">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1604952280961">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604730285691" />
-    <state width="1237" height="204" key="GridCell.Tab.0.center" timestamp="1604730285691">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604952280961" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1604952280960">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1604730285691" />
-    <state width="1237" height="204" key="GridCell.Tab.0.left" timestamp="1604730285691">
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1604952280960" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1604952280960">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1604730285691" />
-    <state width="1237" height="204" key="GridCell.Tab.0.right" timestamp="1604730285691">
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1604952280960" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1604952280961">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="204" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1604730285691" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1604952280961" />
     <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1604730285691">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -270,14 +309,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1604631921929" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1604730281351">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1604730980675">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1604730281351" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1604685106207">
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1604730980675" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1604731039400">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1604685106207" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1604731039400" />
     <state x="271" y="67" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1604683541677">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
