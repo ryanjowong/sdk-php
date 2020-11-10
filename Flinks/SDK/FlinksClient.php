@@ -127,15 +127,15 @@ class FlinksClient
 
 //tests
 
-$client = new FlinksClient("","");
-
+new FlinksClient("","");
+print("<br>\n");
 $client1 = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "toolbox");
 $response1 = $client1->Authorize("FlinksCapital", "Greatday", "Everyday", true, true);
 print_r($response1);
-
+print("<br>\n");
 $response2 = $client1->AuthorizeWithLoginId("b4c824ca-28a0-4a5a-3208-08d883ee0a9c");
 print_r($response2);
-
+print("<br>\n");
 $client2 = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "demo");
 $response3 = $client2->GenerateAuthorizeToken("TheSecretKey");
 print_r($response3);

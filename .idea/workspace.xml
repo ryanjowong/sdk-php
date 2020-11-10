@@ -28,11 +28,8 @@
     <list default="true" id="22872d6d-254f-41cc-a3ba-4a636f7879ff" name="Default Changelist" comment="Removed foo function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flinks/Model/AuthorizeRequestBody.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/Model/AuthorizeRequestBody.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,6 +129,11 @@
       <method v="2" />
     </configuration>
     <configuration name="FlinksClientTest.testGenerateAuthorizeToken" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP 7.4" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
       <TestRunner class="Flinks\FlinksClientTest" file="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" method="testGenerateAuthorizeToken" scope="Method" />
       <method v="2" />
     </configuration>
@@ -178,7 +180,9 @@
       <workItem from="1604941511027" duration="5191000" />
       <workItem from="1604951645252" duration="6226000" />
       <workItem from="1604976492599" duration="3921000" />
-      <workItem from="1604988347535" duration="1283000" />
+      <workItem from="1604988347535" duration="1593000" />
+      <workItem from="1604990006952" duration="92000" />
+      <workItem from="1605018354489" duration="1383000" />
     </task>
     <task id="LOCAL-00001" summary="Removed foo function">
       <created>1604685101610</created>
@@ -222,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604977116347</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added to tests">
+      <created>1604989829098</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1604989829098</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,7 +273,8 @@
     <MESSAGE value="Made some changes" />
     <MESSAGE value="Functions work!" />
     <MESSAGE value="Added Models" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Models" />
+    <MESSAGE value="Added to tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added to tests" />
   </component>
   <component name="WindowStateProjectService">
     <state x="221" y="0" key="#CLI_Interpreters" timestamp="1604957923668">
@@ -273,10 +285,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="221" y="0" key="#Test_Frameworks/0.0.1280.680@0.0.1280.680" timestamp="1604721256564" />
-    <state x="141" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604989634283">
+    <state x="141" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605018587947">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="141" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1604989634283" />
+    <state x="141" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1605018587947" />
     <state x="418" y="253" width="444" height="264" key="ComposerInitDialogKey" timestamp="1604632420772">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -297,22 +309,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="283" y="39" key="Github.UntrackedFilesDialog/0.0.1280.680@0.0.1280.680" timestamp="1604683930427" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1604989636101">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1605019723906">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604989636101" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1604989636100">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605019723906" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1605019723906">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1604989636100" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1604989636100">
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605019723906" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1605019723905">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1604989636100" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1604989636101">
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605019723905" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1605019723906">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1604989636101" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605019723906" />
     <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1604730285691">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -345,10 +357,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1604979188476" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1604952711862">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1604989845519">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1604952711862" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1604989845519" />
     <state x="271" y="67" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1604683541677">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
