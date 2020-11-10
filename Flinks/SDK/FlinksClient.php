@@ -117,7 +117,7 @@ $client1 = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "toolbox");
 $response1 = $client1->Authorize("FlinksCapital", "Greatday", "Everyday", true, true);
 print_r($response1);
 
-$response2 = $client1->AuthorizeWithLoginId("b4c824ca-28a0-4a5a-3208-08d883ee0a9c ");
+$response2 = $client1->AuthorizeWithLoginId("b4c824ca-28a0-4a5a-3208-08d883ee0a9c");
 print_r($response2);
 
 $client2 = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "demo");
