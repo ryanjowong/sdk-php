@@ -2,7 +2,7 @@
 
  class EndpointConstant
  {
-      public function BaseUrl ($instance, $customerId)
+      public function BaseUrl (string $instance, string $customerId)
       {
           return "https://{$instance}-api.private.fin.ag/v3/{$customerId}/";
       }
