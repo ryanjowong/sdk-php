@@ -4,7 +4,7 @@ namespace Flinks;
 
 require_once "../../vendor/autoload.php";
 
-use Authorize\AuthorizeRequestBody;
+use AuthorizeRequestBody;
 use ClientStatus;
 use Exception;
 use GuzzleHttp\Client;

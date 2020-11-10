@@ -26,10 +26,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22872d6d-254f-41cc-a3ba-4a636f7879ff" name="Default Changelist" comment="Removed foo function">
-      <change afterPath="$PROJECT_DIR$/Flinks/Model/ClientStatus.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flinks/Model/EndpointConstant.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/Model/EndpointConstant.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flinks/Model/AuthorizeRequestBody.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/Model/AuthorizeRequestBody.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
     </list>
@@ -122,6 +123,11 @@
   </component>
   <component name="RunManager" selected="PHP Built-in Web Server.Flinks">
     <configuration name="FlinksClientTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP 7.4" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
       <TestRunner class="Flinks\FlinksClientTest" file="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" scope="Class" />
       <method v="2" />
     </configuration>
@@ -148,8 +154,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.FlinksClientTest.testGenerateAuthorizeToken" />
         <item itemvalue="PHPUnit.FlinksClientTest" />
+        <item itemvalue="PHPUnit.FlinksClientTest.testGenerateAuthorizeToken" />
       </list>
     </recent_temporary>
   </component>
@@ -172,6 +178,7 @@
       <workItem from="1604941511027" duration="5191000" />
       <workItem from="1604951645252" duration="6226000" />
       <workItem from="1604976492599" duration="3921000" />
+      <workItem from="1604988347535" duration="1283000" />
     </task>
     <task id="LOCAL-00001" summary="Removed foo function">
       <created>1604685101610</created>
@@ -266,10 +273,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="221" y="0" key="#Test_Frameworks/0.0.1280.680@0.0.1280.680" timestamp="1604721256564" />
-    <state x="141" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604975950989">
+    <state x="141" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604989634283">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="141" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1604975950989" />
+    <state x="141" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1604989634283" />
     <state x="418" y="253" width="444" height="264" key="ComposerInitDialogKey" timestamp="1604632420772">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -278,10 +285,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="538" y="91" key="EnvironmentVariablesDialog/0.0.1280.680@0.0.1280.680" timestamp="1604643710112" />
-    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1604957918366">
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1604987965407">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1604957918366" />
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1604987965407" />
     <state x="520" y="239" key="Github.ShareDialog" timestamp="1604730923745">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -290,22 +297,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="283" y="39" key="Github.UntrackedFilesDialog/0.0.1280.680@0.0.1280.680" timestamp="1604683930427" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1604980436877">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1604989636101">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604980436877" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1604980436876">
+    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1604989636101" />
+    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1604989636100">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1604980436876" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1604980436875">
+    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1604989636100" />
+    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1604989636100">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1604980436875" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1604980436876">
+    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1604989636100" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1604989636101">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1604980436876" />
+    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1604989636101" />
     <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1604730285691">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -330,10 +337,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1604980228918" />
-    <state x="446" y="43" key="RollbackChangesDialog" timestamp="1604976336998">
+    <state x="446" y="43" key="RollbackChangesDialog" timestamp="1604987925719">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="43" key="RollbackChangesDialog/0.0.1280.680@0.0.1280.680" timestamp="1604976336998" />
+    <state x="446" y="43" key="RollbackChangesDialog/0.0.1280.680@0.0.1280.680" timestamp="1604987925719" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1604979188476">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

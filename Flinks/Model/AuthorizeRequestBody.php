@@ -1,215 +1,122 @@
 <?php
 
-namespace Authorize;
-
 class AuthorizeRequestBody
 {
-    /**
-     * @var string
-     */
-    protected $username;
-    /**
-     * @var string
-     */
-    protected $password;
-    /**
-     * @var string
-     */
-    protected $loginId;
-    /**
-     * @var string[][]
-     */
-    protected $securityResponses;
-    /**
-     * @var bool
-     */
-    protected $save;
-    /**
-     * @var bool
-     */
-    protected $mostRecentCached;
-    /**
-     * @var string
-     */
-    protected $withMfaQuestions;
-    /**
-     * @var string
-     */
-    protected $language;
-    /**
-     * @var string
-     */
-    protected $tag;
-    /**
-     * @var bool
-     */
-    protected $scheduleRefresh;
-    /**
-     * @return string
-     */
-    public function getUsername()
+    protected string $username;
+    protected string $password;
+    protected string $loginId;
+    protected array $securityResponses;
+    protected bool $save;
+    protected bool $mostRecentCached;
+    protected string $withMfaQuestions;
+    protected string $language;
+    protected string $tag;
+    protected bool $scheduleRefresh;
+
+    public function getUsername(): string
     {
         return $this->username;
     }
-    /**
-     * @param string $username
-     *
-     * @return self
-     */
-    public function setUsername($username = null)
+
+    public function setUsername(string $username): self
     {
         $this->username = $username;
         return $this;
     }
-    /**
-     * @return string
-     */
-    public function getPassword()
+    public function getPassword(): string
     {
         return $this->password;
     }
-    /**
-     * @param string $password
-     *
-     * @return self
-     */
-    public function setPassword($password = null)
+
+    public function setPassword(string $password): self
     {
         $this->password = $password;
         return $this;
     }
-    /**
-     * @return string
-     */
-    public function getLoginId()
+
+    public function getLoginId(): string
     {
         return $this->loginId;
     }
-    /**
-     * @param string $loginId
-     *
-     * @return self
-     */
-    public function setLoginId($loginId = null)
+
+    public function setLoginId(string $loginId): self
     {
         $this->loginId = $loginId;
         return $this;
     }
-     /**
-     * @return string[][]
-     */
-    public function getSecurityResponses()
+
+    public function getSecurityResponses(): array
     {
         return $this->securityResponses;
     }
-    /**
-     * @param string[][] $securityResponses
-     *
-     * @return self
-     */
-    public function setSecurityResponses(\ArrayObject $securityResponses = null)
+
+    public function setSecurityResponses(array $securityResponses): self
     {
         $this->securityResponses = $securityResponses;
         return $this;
     }
-    /**
-     * @return bool
-     */
-    public function getSave()
+
+    public function getSave(): bool
     {
         return $this->save;
     }
-    /**
-     * @param bool $save
-     *
-     * @return self
-     */
-    public function setSave($save = null)
+
+    public function setSave(bool $save): self
     {
         $this->save = $save;
         return $this;
     }
-    /**
-     * @return bool
-     */
-    public function getMostRecentCached()
+
+    public function getMostRecentCached(): bool
     {
         return $this->mostRecentCached;
     }
-    /**
-     * @param bool $mostRecentCached
-     *
-     * @return self
-     */
-    public function setMostRecentCached($mostRecentCached = null)
+
+    public function setMostRecentCached(bool $mostRecentCached): self
     {
         $this->mostRecentCached = $mostRecentCached;
         return $this;
     }
-    /**
-     * @return string
-     */
-    public function getWithMfaQuestions()
+
+    public function getWithMfaQuestions(): string
     {
         return $this->withMfaQuestions;
     }
-    /**
-     * @param string $withMfaQuestions
-     *
-     * @return self
-     */
-    public function setWithMfaQuestions($withMfaQuestions = null)
+
+    public function setWithMfaQuestions(string $withMfaQuestions): self
     {
         $this->withMfaQuestions = $withMfaQuestions;
         return $this;
     }
-     /**
-     * @return string
-     */
-    public function getLanguage()
+
+    public function getLanguage(): string
     {
         return $this->language;
     }
-    /**
-     * @param string $language
-     *
-     * @return self
-     */
-    public function setLanguage($language = null)
+
+    public function setLanguage(string $language): self
     {
         $this->language = $language;
         return $this;
     }
-     /**
-     * @return string
-     */
-    public function getTag()
+
+    public function getTag(): string
     {
         return $this->tag;
     }
-    /**
-     * @param string $tag
-     *
-     * @return self
-     */
-    public function setTag($tag = null)
+
+    public function setTag(string $tag): self
     {
         $this->tag = $tag;
         return $this;
     }
-    /**
-     * @return bool
-     */
-    public function getScheduleRefresh()
+
+    public function getScheduleRefresh(): bool
     {
         return $this->scheduleRefresh;
     }
-    /**
-     * @param bool $scheduleRefresh
-     *
-     * @return self
-     */
-    public function setScheduleRefresh($scheduleRefresh = null)
+
+    public function setScheduleRefresh(bool $scheduleRefresh): self
     {
         $this->scheduleRefresh = $scheduleRefresh;
         return $this;
