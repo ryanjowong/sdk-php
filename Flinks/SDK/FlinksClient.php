@@ -5,6 +5,7 @@ namespace Flinks;
 require_once "../../vendor/autoload.php";
 require_once "../Model/EndpointConstant.php";
 require_once "../Model/ClientStatus.php";
+require_once "../Model/AuthTokenResult.php";
 
 //use Flinks\AuthorizeRequestBody;
 use Exception;
@@ -124,16 +125,15 @@ class FlinksClient
             ]
         ]);
 
-        $body = $response->getBody();
-        $object_body = json_decode($body);
-        $array_body = (array) json_decode($body);
+        $decoded_response = $this->DecodeResponse($response);
 
-        if($response->getStatusCode() == 200)
+        if($decoded_response["HttpStatusCode"] == 200)
         {
-            $this->SetAuthToken($array_body["Token"]);
+            $apiResponse = new AuthTokenResult($decoded_response["HttpStatusCode"], $decoded_response["Token"]);
+            $this->SetAuthToken($apiResponse->getToken());
         }
 
-        return($object_body);
+        return $apiResponse;
     }
 
     public function GetAccountsSummary(string $requestId): Object
@@ -199,7 +199,6 @@ class FlinksClient
 }
 
 //tests
-
 new FlinksClient("","");
 print("<br>\n");
 $client1 = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "toolbox");
@@ -213,5 +212,5 @@ $client2 = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "demo");
 $response3 = $client2->GenerateAuthorizeToken("TheSecretKey");
 print_r($response3);
 print("<br>\n");
-$response4 = $client1->GetAccountsSummary("2955021d-f160-46bb-91a8-535bbe2f9d40");
+$response4 = $client1->GetAccountsSummary("abd78a01-e0e3-486f-be82-8bed3834fee5");
 print_r($response4);
