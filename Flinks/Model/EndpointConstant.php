@@ -1,4 +1,6 @@
-<?
+<?php
+
+namespace Flinks;
 
  class EndpointConstant
  {
@@ -17,6 +19,5 @@
       const GetScore = "Insight/login/{LoginId}/score/{RequestId}";
       const GetAttribute = "Insight/login/{LoginId}/attributes/{RequestId}";
       const GenerateAuthorizeToken = "BankingServices/GenerateAuthorizeToken";
-
 
  }

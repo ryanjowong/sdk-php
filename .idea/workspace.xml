@@ -28,6 +28,10 @@
     <list default="true" id="22872d6d-254f-41cc-a3ba-4a636f7879ff" name="Default Changelist" comment="Removed foo function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flinks/Model/AuthTokenResult.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/Model/AuthTokenResult.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flinks/Model/AuthorizeRequestBody.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/Model/AuthorizeRequestBody.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flinks/Model/ClientStatus.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/Model/ClientStatus.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flinks/Model/EndpointConstant.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/Model/EndpointConstant.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" afterDir="false" />
     </list>
@@ -97,7 +101,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/php-7.4.12/php.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Flinks/SDK" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -118,7 +122,7 @@
       <recent name="C:\Users\rjowong\PhpstormProjects\sdk" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Built-in Web Server.Flinks">
+  <component name="RunManager" selected="PHP Script.FlinksClient">
     <configuration name="FlinksClientTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -126,6 +130,10 @@
         </PhpTestInterpreterSettings>
       </CommandLine>
       <TestRunner class="Flinks\FlinksClientTest" file="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="FlinksClientTest.testAuthorize" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Flinks\FlinksClientTest" file="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" method="testAuthorize" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="FlinksClientTest.testGenerateAuthorizeToken" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -137,7 +145,19 @@
       <TestRunner class="Flinks\FlinksClientTest" file="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" method="testGenerateAuthorizeToken" scope="Method" />
       <method v="2" />
     </configuration>
+    <configuration name="FlinksClientTest.testGetAccountsSummary" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Flinks\FlinksClientTest" file="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" method="testGetAccountsSummary" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="Flinks" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$/Flinks/SDK" port="8000" router_script="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php" use_router_script="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="EndpointConstant" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/Flinks/Model/EndpointConstant.php">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP 7.4" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
       <method v="2" />
     </configuration>
     <configuration name="FlinksClient" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php">
@@ -150,13 +170,18 @@
     </configuration>
     <list>
       <item itemvalue="PHP Built-in Web Server.Flinks" />
+      <item itemvalue="PHP Script.EndpointConstant" />
       <item itemvalue="PHP Script.FlinksClient" />
       <item itemvalue="PHPUnit.FlinksClientTest" />
       <item itemvalue="PHPUnit.FlinksClientTest.testGenerateAuthorizeToken" />
+      <item itemvalue="PHPUnit.FlinksClientTest.testAuthorize" />
+      <item itemvalue="PHPUnit.FlinksClientTest.testGetAccountsSummary" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="PHPUnit.FlinksClientTest" />
+        <item itemvalue="PHPUnit.FlinksClientTest.testGetAccountsSummary" />
+        <item itemvalue="PHPUnit.FlinksClientTest.testAuthorize" />
         <item itemvalue="PHPUnit.FlinksClientTest.testGenerateAuthorizeToken" />
       </list>
     </recent_temporary>
@@ -182,7 +207,13 @@
       <workItem from="1604976492599" duration="3921000" />
       <workItem from="1604988347535" duration="1593000" />
       <workItem from="1604990006952" duration="92000" />
-      <workItem from="1605018354489" duration="1383000" />
+      <workItem from="1605018354489" duration="3593000" />
+      <workItem from="1605023937052" duration="1264000" />
+      <workItem from="1605072929232" duration="587000" />
+      <workItem from="1605126967175" duration="2437000" />
+      <workItem from="1605129586361" duration="6759000" />
+      <workItem from="1605139475869" duration="59000" />
+      <workItem from="1605205679980" duration="7030000" />
     </task>
     <task id="LOCAL-00001" summary="Removed foo function">
       <created>1604685101610</created>
@@ -233,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604989829098</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added to FlinksClientTest">
+      <created>1605020277321</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1605020277321</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +312,8 @@
     <MESSAGE value="Functions work!" />
     <MESSAGE value="Added Models" />
     <MESSAGE value="Added to tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added to tests" />
+    <MESSAGE value="Added to FlinksClientTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added to FlinksClientTest" />
   </component>
   <component name="WindowStateProjectService">
     <state x="221" y="0" key="#CLI_Interpreters" timestamp="1604957923668">
@@ -285,10 +324,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="221" y="0" key="#Test_Frameworks/0.0.1280.680@0.0.1280.680" timestamp="1604721256564" />
-    <state x="141" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605018587947">
+    <state x="115" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605211397401">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="141" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1605018587947" />
+    <state x="115" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1605211397401" />
     <state x="418" y="253" width="444" height="264" key="ComposerInitDialogKey" timestamp="1604632420772">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -297,10 +336,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="538" y="91" key="EnvironmentVariablesDialog/0.0.1280.680@0.0.1280.680" timestamp="1604643710112" />
-    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1604987965407">
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1605128034833">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1604987965407" />
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1605128034833" />
     <state x="520" y="239" key="Github.ShareDialog" timestamp="1604730923745">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -309,22 +348,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="283" y="39" key="Github.UntrackedFilesDialog/0.0.1280.680@0.0.1280.680" timestamp="1604683930427" />
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom" timestamp="1605019723906">
+    <state width="1237" height="198" key="GridCell.Tab.0.bottom" timestamp="1605211465371">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605019723906" />
-    <state width="1237" height="163" key="GridCell.Tab.0.center" timestamp="1605019723906">
+    <state width="1237" height="198" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605211465371" />
+    <state width="1237" height="198" key="GridCell.Tab.0.center" timestamp="1605211465370">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605019723906" />
-    <state width="1237" height="163" key="GridCell.Tab.0.left" timestamp="1605019723905">
+    <state width="1237" height="198" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605211465370" />
+    <state width="1237" height="198" key="GridCell.Tab.0.left" timestamp="1605211465370">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605019723905" />
-    <state width="1237" height="163" key="GridCell.Tab.0.right" timestamp="1605019723906">
+    <state width="1237" height="198" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605211465370" />
+    <state width="1237" height="198" key="GridCell.Tab.0.right" timestamp="1605211465370">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605019723906" />
+    <state width="1237" height="198" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605211465370" />
     <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1604730285691">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -357,10 +396,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1604979188476" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1604989845519">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1605020291889">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1604989845519" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1605020291889" />
     <state x="271" y="67" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1604683541677">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

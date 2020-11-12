@@ -1,5 +1,7 @@
 <?php
 
+namespace Flinks;
+
 class AuthorizeRequestBody
 {
     protected string $username;
