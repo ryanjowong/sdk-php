@@ -2,34 +2,22 @@
 
 namespace Flinks;
 
-class AuthorizeResult
+class AccountsSummaryResult
 {
-    protected array $Links;
     protected int $HttpStatusCode;
-    protected ?Object $Login;
-    protected ?array $SecurityChallenges;
+    protected array $Accounts;
+    protected Object $Login;
     protected string $Institution;
     protected string $RequestId;
 
-    public function __construct(array $Links, int $HttpStatusCode, Object $Login = null,
-                                array $SecurityChallenges = null, string $Institution, string $RequestId)
+    public function __construct(int $HttpStatusCode, array $Accounts, Object $Login,
+                                string $Institution, string $RequestId)
     {
-        $this->Links = $Links;
         $this->HttpStatusCode = $HttpStatusCode;
+        $this->Accounts = $Accounts;
         $this->Login = $Login;
-        $this->SecurityChallenges = $SecurityChallenges;
         $this->Institution = $Institution;
         $this->RequestId = $RequestId;
-    }
-
-    public function getLinks(): array
-    {
-        return $this->Links;
-    }
-
-    public function setLinks(array $Links): void
-    {
-        $this->Links = $Links;
     }
 
     public function getHttpStatusCode(): int
@@ -42,6 +30,16 @@ class AuthorizeResult
         $this->HttpStatusCode = $HttpStatusCode;
     }
 
+    public function getAccounts(): array
+    {
+        return $this->Accounts;
+    }
+
+    public function setLinks(array $Accounts): void
+    {
+        $this->Accounts = $Accounts;
+    }
+
     public function getLogin(): Object
     {
         return $this->Login;
@@ -50,16 +48,6 @@ class AuthorizeResult
     public function setLogin(Object $Login): void
     {
         $this->Login = $Login;
-    }
-
-    public function getSecurityChallenges(): array
-    {
-        return $this->SecurityChallenges;
-    }
-
-    public function setSecurityChallenges(array $SecurityChallenges): void
-    {
-        $this->SecurityChallenges = $SecurityChallenges;
     }
 
     public function getInstitution(): string

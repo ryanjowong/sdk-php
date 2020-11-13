@@ -7,28 +7,31 @@ require_once "../SDK/FlinksClient.php";
 
 class FlinksClientTest extends TestCase
 {
-    /*public function testConstructor()
+    /*public function testConstructorThrowsNullException()
     {
-        $bad_client = new FlinksClient("","");
-
+        $thrown_exception = new FlinksClient("","");
+        $this->expectExceptionObject($thrown_exception);
     }*/
 
     public function testAuthorize()
     {
         $good_client = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "toolbox");
         $good_response = $good_client->Authorize("FlinksCapital", "Greatday", "Everyday", true, true);
-        $good_array_response = (array) $good_response;
 
-        $this->assertEquals(200, $good_array_response["HttpStatusCode"]);
+        $this->assertEquals(200, $good_response->getHttpStatusCode());
+        $this->assertEquals(ClientStatus::AUTHORIZED, $good_client->GetClientStatus());
     }
 
     public function testAuthorizeWithLoginId()
     {
         $good_client = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "toolbox");
-        $good_response = $good_client->AuthorizeWithLoginId("e86a6f65-f486-4018-52a6-08d885d6c2f9");
-        $good_array_response = (array) $good_response;
+        $cached_client = $good_client->Authorize("FlinksCapital", "Greatday", "Everyday", true, true);
+        $cached_client_login_array = (array) $cached_client->getLogin();
+        $loginId = $cached_client_login_array["Id"];
+        $good_response = $good_client->AuthorizeWithLoginId($loginId);
 
-        $this->assertEquals(200, $good_array_response["HttpStatusCode"]);
+        $this->assertEquals(200, $good_response->getHttpStatusCode());
+        $this->assertEquals(ClientStatus::AUTHORIZED, $good_client->GetClientStatus());
     }
 
     public function testGenerateAuthorizeToken()
@@ -43,11 +46,13 @@ class FlinksClientTest extends TestCase
     public function testGetAccountsSummary()
     {
         $good_client = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "toolbox");
-        $authorized_client = (array) $good_client->AuthorizeWithLoginId("e86a6f65-f486-4018-52a6-08d885d6c2f9");
-        $requestId = $authorized_client["RequestId"];
+        $authorized_client = $good_client->Authorize("FlinksCapital", "Greatday", "Everyday", true, true);
+        $requestId = $authorized_client->getRequestId();
         $good_response = $good_client->GetAccountsSummary($requestId);
-        $good_array_response = (array) $good_response;
 
-        $this->assertEquals(200, $good_array_response["HttpStatusCode"]);
+        $this->assertNotNull($good_response->getAccounts());
+        $this->assertEquals($authorized_client->getRequestId(), $good_response->getRequestId());
+        $this->assertEquals(200, $good_response->getHttpStatusCode());
+        $this->assertEquals(ClientStatus::AUTHORIZED, $good_client->GetClientStatus());
     }
 }

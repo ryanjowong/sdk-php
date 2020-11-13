@@ -6,6 +6,8 @@ require_once "../../vendor/autoload.php";
 require_once "../Model/EndpointConstant.php";
 require_once "../Model/ClientStatus.php";
 require_once "../Model/AuthTokenResult.php";
+require_once "../Model/AuthorizeResult.php";
+require_once "../Model/AccountsSummaryResult.php";
 
 //use Flinks\AuthorizeRequestBody;
 use Exception;
@@ -85,9 +87,20 @@ class FlinksClient
 
         $this->SetClientStatus($response->getStatusCode());
 
-        $body = $response->getBody();
-        $object_body = json_decode($body);
-        return($object_body);
+        $decoded_response = $this->DecodeResponse($response);
+
+        if($decoded_response["HttpStatusCode"] == 200)
+        {
+            $apiResponse = new AuthorizeResult($decoded_response["Links"], $decoded_response["HttpStatusCode"],
+                $decoded_response["Login"], null, $decoded_response["Institution"], $decoded_response["RequestId"]);
+        }
+        if($decoded_response["HttpStatusCode"] == 203)
+        {
+            $apiResponse = new AuthorizeResult($decoded_response["Links"], $decoded_response["HttpStatusCode"],
+                null, $decoded_response["SecurityChallenges"], $decoded_response["Institution"], $decoded_response["RequestId"]);
+        }
+
+        return $apiResponse;
     }
 
     public function AuthorizeWithLoginId(string $loginId): Object
@@ -108,9 +121,15 @@ class FlinksClient
 
         $this->SetClientStatus($response->getStatusCode());
 
-        $body = $response->getBody();
-        $object_body = json_decode($body);
-        return($object_body);
+        $decoded_response = $this->DecodeResponse($response);
+
+        if($decoded_response["HttpStatusCode"] == 200)
+        {
+            $apiResponse = new AuthorizeResult($decoded_response["Links"], $decoded_response["HttpStatusCode"],
+                $decoded_response["Login"], null, $decoded_response["Institution"], $decoded_response["RequestId"]);
+        }
+
+        return $apiResponse;
     }
 
     public function GenerateAuthorizeToken(string $secret_key): Object
@@ -156,9 +175,15 @@ class FlinksClient
             ]
         ]);
 
-        $body = $response->getBody();
-        $object_body = json_decode($body);
-        return($object_body);
+        $decoded_response = $this->DecodeResponse($response);
+
+        if($decoded_response["HttpStatusCode"] == 200)
+        {
+            $apiResponse = new AccountsSummaryResult($decoded_response["HttpStatusCode"], $decoded_response["Accounts"],
+                $decoded_response["Login"], $decoded_response["Institution"], $decoded_response["RequestId"]);
+        }
+
+        return $apiResponse;
     }
 
     //Helper functions
@@ -198,19 +223,29 @@ class FlinksClient
     }
 }
 
-//tests
+//build to tests
 new FlinksClient("","");
-print("<br>\n");
+print("\n");
+/*Authorize with a 203 status code response
 $client1 = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "toolbox");
-$response1 = $client1->Authorize("FlinksCapital", "Greatday", "Everyday", true, true);
+$response_203 = $client1->Authorize("FlinksCapital", "Greatday", "Everyday", false, true);
+print_r($response_203);
+print("\n");*/
+//Authorize with a 200 status code response
+$client2 = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "toolbox");
+$response1 = $client2->Authorize("FlinksCapital", "Greatday", "Everyday", true, true);
 print_r($response1);
-print("<br>\n");
-$response2 = $client1->AuthorizeWithLoginId("e86a6f65-f486-4018-52a6-08d885d6c2f9");
+print("\n");
+//AuthorizeWithLoginId with a 200 status code response
+$response2 = $client2->AuthorizeWithLoginId("e86a6f65-f486-4018-52a6-08d885d6c2f9");
 print_r($response2);
-print("<br>\n");
-$client2 = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "demo");
-$response3 = $client2->GenerateAuthorizeToken("TheSecretKey");
+print("\n");
+//GenerateAuthorizeToken with a 200 status code response
+$client3 = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "demo");
+$response3 = $client3->GenerateAuthorizeToken("TheSecretKey");
 print_r($response3);
-print("<br>\n");
-$response4 = $client1->GetAccountsSummary("abd78a01-e0e3-486f-be82-8bed3834fee5");
+print("\n");
+//GetAccountsSummary with a 200 status code response
+$requestId = $response2->getRequestId();
+$response4 = $client2->GetAccountsSummary($requestId);
 print_r($response4);
