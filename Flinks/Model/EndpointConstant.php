@@ -10,10 +10,10 @@ namespace Flinks;
       }
       const Authorize = "BankingServices/Authorize";
       const GetAccountsSummary = "BankingServices/GetAccountsSummary";
+      const GetAccountsSummaryAsync = "BankingServices/GetAccountsSummaryAsync/";
       const GetAccountsDetail = "BankingServices/GetAccountsDetail ";
-      const GetAccountsDetailAsync = "BankingServices/GetAccountsDetailAsync";
+      const GetAccountsDetailAsync = "BankingServices/GetAccountsDetailAsync/";
       const GetStatements = "BankingServices/GetStatements";
-      const GetStatementsAsync = "BankingServices/GetStatementsAsync";
       const SetScheduledRefresh = "BankingServices/SetScheduledRefresh";
       const DeleteCard = "BankingServices/DeleteCard";
       const GetScore = "Insight/login/{LoginId}/score/{RequestId}";

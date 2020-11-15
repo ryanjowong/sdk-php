@@ -4,20 +4,46 @@ namespace Flinks;
 
 class AccountsSummaryResult
 {
+    protected ?string $FlinksCode;
+    protected ?array $Links;
     protected int $HttpStatusCode;
-    protected array $Accounts;
-    protected Object $Login;
-    protected string $Institution;
+    protected ?array $Accounts;
+    protected ?Object $Login;
+    protected ?string $Institution;
+    protected ?string $Message;
     protected string $RequestId;
 
-    public function __construct(int $HttpStatusCode, array $Accounts, Object $Login,
-                                string $Institution, string $RequestId)
+    public function __construct(string $FlinksCode = null, array $Links = null, int $HttpStatusCode, array $Accounts = null,
+                                Object $Login = null, string $Institution = null, string $Message = null, string $RequestId)
     {
+        $this->FlinksCode = $FlinksCode;
+        $this->Links = $Links;
         $this->HttpStatusCode = $HttpStatusCode;
         $this->Accounts = $Accounts;
         $this->Login = $Login;
         $this->Institution = $Institution;
+        $this->Message = $Message;
         $this->RequestId = $RequestId;
+    }
+
+    public function getFlinksCode(): string
+    {
+        return $this->FlinksCode;
+    }
+
+    public function setFlinksCode(string $FlinksCode): void
+    {
+        $this->FlinksCode =$FlinksCode;
+    }
+
+    public function getLinks(): array
+    {
+        return $this->Links;
+    }
+
+    public function setLinks(array $Links): void
+    {
+        $this->Links = $Links;
     }
 
     public function getHttpStatusCode(): int
@@ -35,7 +61,7 @@ class AccountsSummaryResult
         return $this->Accounts;
     }
 
-    public function setLinks(array $Accounts): void
+    public function setAccounts(array $Accounts): void
     {
         $this->Accounts = $Accounts;
     }
@@ -58,6 +84,16 @@ class AccountsSummaryResult
     public function setInstitution(string $Institution): void
     {
         $this->Institution = $Institution;
+    }
+
+    public function getMessage(): string
+    {
+        return $this->Message;
+    }
+
+    public function setMessage(string $Message): void
+    {
+        $this->Message = $Message;
     }
 
     public function getRequestId(): string
