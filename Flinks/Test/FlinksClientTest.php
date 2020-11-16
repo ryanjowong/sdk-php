@@ -22,6 +22,15 @@ class FlinksClientTest extends TestCase
         $this->assertEquals(ClientStatus::AUTHORIZED, $good_client->GetClientStatus());
     }
 
+    public function test401Authorize()
+    {
+        $bad_client = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "toolbox");
+        $bad_response = $bad_client->Authorize("FlinksCapital", "Greatday", "WrongPassword", false,);
+
+        $this->assertEquals(401, $bad_response->getHttpStatusCode());
+        $this->assertEquals(ClientStatus::UNAUTHORIZED, $bad_client->GetClientStatus());
+    }
+
     public function testAuthorizeWithLoginId()
     {
         $good_client = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "toolbox");
@@ -34,6 +43,15 @@ class FlinksClientTest extends TestCase
         $this->assertEquals(ClientStatus::AUTHORIZED, $good_client->GetClientStatus());
     }
 
+    public function test400AuthorizeWithLoginId()
+    {
+        $bad_client = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "toolbox");
+        $bad_response = $bad_client->AuthorizeWithLoginId("e86a6f65-f486-4018-52a6-08d885d6c2f0");
+
+        $this->assertEquals(400, $bad_response->getHttpStatusCode());
+        $this->assertEquals(ClientStatus::BAD_REQUEST, $bad_client->GetClientStatus());
+    }
+
     public function testGenerateAuthorizeToken()
     {
         $good_client = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "demo");
@@ -43,14 +61,14 @@ class FlinksClientTest extends TestCase
         $this->assertNotNull($good_response->getToken());
     }
 
-    /*public function testWrongSecretKeyGenerateAuthorizeToken()
+    public function testWrongSecretKeyGenerateAuthorizeToken()
     {
         $client = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "demo");
         $response = $client->GenerateAuthorizeToken("TheWrongSecretKey");
 
         $this->assertEquals(401, $response->getHttpStatusCode());
         $this->assertEquals("UNAUTHORIZED", $response->getFlinksCode());
-    }*/
+    }
 
     public function testGetAccountsSummary()
     {
@@ -65,6 +83,16 @@ class FlinksClientTest extends TestCase
         $this->assertEquals($authorized_client->getRequestId(), $good_response->getRequestId());
         $this->assertEquals(200, $good_response->getHttpStatusCode());
         $this->assertEquals(ClientStatus::AUTHORIZED, $good_client->GetClientStatus());
+    }
+
+    public function test400GetAccountsSummary()
+    {
+        $client = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "toolbox");
+        $client->Authorize("FlinksCapital", "Greatday", "Everyday", true, true);
+        $bad_response = $client->GetAccountsSummary("883faa95-a3f5-4ff3-98fe-03d5d6b5862a");
+
+        $this->assertEquals(400, $bad_response->getHttpStatusCode());
+        $this->assertEquals(ClientStatus::BAD_REQUEST, $client->GetClientStatus());
     }
 
     public function testGetAccountsSummaryAsync()
@@ -91,5 +119,15 @@ class FlinksClientTest extends TestCase
             $this->assertEquals($authorized_client->getRequestId(), $good_response->getRequestId());
             $this->assertEquals(202, $good_response->getHttpStatusCode());
         }
+    }
+
+    public function test400GetAccountsSummaryAsync()
+    {
+        $client = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "toolbox");
+        $client->Authorize("FlinksCapital", "Greatday", "Everyday", true, true);
+        $bad_response = $client->GetAccountsSummaryAsync("883faa95-a3f5-4ff3-98fe-03d5d6b5862a");
+
+        $this->assertEquals(400, $bad_response->getHttpStatusCode());
+        $this->assertEquals(ClientStatus::BAD_REQUEST, $client->GetClientStatus());
     }
 }

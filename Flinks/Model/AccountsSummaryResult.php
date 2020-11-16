@@ -11,10 +11,10 @@ class AccountsSummaryResult
     protected ?Object $Login;
     protected ?string $Institution;
     protected ?string $Message;
-    protected string $RequestId;
+    protected ?string $RequestId;
 
     public function __construct(string $FlinksCode = null, array $Links = null, int $HttpStatusCode, array $Accounts = null,
-                                Object $Login = null, string $Institution = null, string $Message = null, string $RequestId)
+                                Object $Login = null, string $Institution = null, string $Message = null, string $RequestId = null)
     {
         $this->FlinksCode = $FlinksCode;
         $this->Links = $Links;
