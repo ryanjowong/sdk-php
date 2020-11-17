@@ -26,11 +26,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22872d6d-254f-41cc-a3ba-4a636f7879ff" name="Default Changelist" comment="Removed foo function">
+      <change afterPath="$PROJECT_DIR$/Flinks/Model/AccountsDetailResult.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Flinks/Model/DaysOfTransactions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flinks/Model/AccountsSummaryResult.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/Model/AccountsSummaryResult.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flinks/Model/AuthorizeResult.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/Model/AuthorizeResult.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flinks/Model/ClientStatus.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/Model/ClientStatus.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flinks/Model/EndpointConstant.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/Model/EndpointConstant.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" afterDir="false" />
     </list>
@@ -134,20 +134,20 @@
       <TestRunner class="Flinks\FlinksClientTest" file="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="FlinksClientTest.test400AuthorizeWithLoginId" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Flinks\FlinksClientTest" file="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" method="test400AuthorizeWithLoginId" scope="Method" />
+    <configuration name="FlinksClientTest.test400GetAccountsDetail" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Flinks\FlinksClientTest" file="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" method="test400GetAccountsDetail" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="FlinksClientTest.test400GetAccountsSummary" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Flinks\FlinksClientTest" file="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" method="test400GetAccountsSummary" scope="Method" />
+    <configuration name="FlinksClientTest.test400GetAccountsDetailAsync" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Flinks\FlinksClientTest" file="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" method="test400GetAccountsDetailAsync" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="FlinksClientTest.test400GetAccountsSummaryAsync" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Flinks\FlinksClientTest" file="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" method="test400GetAccountsSummaryAsync" scope="Method" />
+    <configuration name="FlinksClientTest.testConstructorThrowsNullException" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Flinks\FlinksClientTest" file="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" method="testConstructorThrowsNullException" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="FlinksClientTest.test401AuthorizeWithLoginId" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Flinks\FlinksClientTest" file="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" method="test401AuthorizeWithLoginId" scope="Method" />
+    <configuration name="FlinksClientTest.testGetAccountsDetailAsync" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Flinks\FlinksClientTest" file="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" method="testGetAccountsDetailAsync" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="Flinks" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$/Flinks/SDK" port="8000" router_script="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php" use_router_script="true">
@@ -174,18 +174,18 @@
       <item itemvalue="PHP Script.EndpointConstant" />
       <item itemvalue="PHP Script.FlinksClient" />
       <item itemvalue="PHPUnit.FlinksClientTest" />
-      <item itemvalue="PHPUnit.FlinksClientTest.test401AuthorizeWithLoginId" />
-      <item itemvalue="PHPUnit.FlinksClientTest.test400AuthorizeWithLoginId" />
-      <item itemvalue="PHPUnit.FlinksClientTest.test400GetAccountsSummary" />
-      <item itemvalue="PHPUnit.FlinksClientTest.test400GetAccountsSummaryAsync" />
+      <item itemvalue="PHPUnit.FlinksClientTest.test400GetAccountsDetail" />
+      <item itemvalue="PHPUnit.FlinksClientTest.testConstructorThrowsNullException" />
+      <item itemvalue="PHPUnit.FlinksClientTest.testGetAccountsDetailAsync" />
+      <item itemvalue="PHPUnit.FlinksClientTest.test400GetAccountsDetailAsync" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="PHPUnit.FlinksClientTest" />
-        <item itemvalue="PHPUnit.FlinksClientTest.test400GetAccountsSummaryAsync" />
-        <item itemvalue="PHPUnit.FlinksClientTest.test400GetAccountsSummary" />
-        <item itemvalue="PHPUnit.FlinksClientTest.test400AuthorizeWithLoginId" />
-        <item itemvalue="PHPUnit.FlinksClientTest.test401AuthorizeWithLoginId" />
+        <item itemvalue="PHPUnit.FlinksClientTest.test400GetAccountsDetailAsync" />
+        <item itemvalue="PHPUnit.FlinksClientTest.testGetAccountsDetailAsync" />
+        <item itemvalue="PHPUnit.FlinksClientTest.testConstructorThrowsNullException" />
+        <item itemvalue="PHPUnit.FlinksClientTest.test400GetAccountsDetail" />
       </list>
     </recent_temporary>
   </component>
@@ -224,6 +224,9 @@
       <workItem from="1605295657951" duration="6743000" />
       <workItem from="1605541616077" duration="4366000" />
       <workItem from="1605555229150" duration="5153000" />
+      <workItem from="1605568829887" duration="171000" />
+      <workItem from="1605625273850" duration="6804000" />
+      <workItem from="1605634215023" duration="1426000" />
     </task>
     <task id="LOCAL-00001" summary="Removed foo function">
       <created>1604685101610</created>
@@ -295,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605219550260</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added 400/401 test cases">
+      <created>1605568931729</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1605568931729</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +349,8 @@
     <MESSAGE value="Added to FlinksClientTest" />
     <MESSAGE value="Added Helper functions and Models (Revamp)" />
     <MESSAGE value="Implemented the AuthTokenResult model in GenerateAuthorizeToken method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented the AuthTokenResult model in GenerateAuthorizeToken method" />
+    <MESSAGE value="Added 400/401 test cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added 400/401 test cases" />
   </component>
   <component name="WindowStateProjectService">
     <state x="221" y="0" key="#CLI_Interpreters" timestamp="1604957923668">
@@ -378,22 +389,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="283" y="39" key="Github.UntrackedFilesDialog/0.0.1280.680@0.0.1280.680" timestamp="1604683930427" />
-    <state width="1237" height="216" key="GridCell.Tab.0.bottom" timestamp="1605567966556">
+    <state width="1237" height="216" key="GridCell.Tab.0.bottom" timestamp="1605635627118">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="216" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605567966556" />
-    <state width="1237" height="216" key="GridCell.Tab.0.center" timestamp="1605567966556">
+    <state width="1237" height="216" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605635627118" />
+    <state width="1237" height="216" key="GridCell.Tab.0.center" timestamp="1605635627118">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="216" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605567966556" />
-    <state width="1237" height="216" key="GridCell.Tab.0.left" timestamp="1605567966556">
+    <state width="1237" height="216" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605635627118" />
+    <state width="1237" height="216" key="GridCell.Tab.0.left" timestamp="1605635627118">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="216" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605567966556" />
-    <state width="1237" height="216" key="GridCell.Tab.0.right" timestamp="1605567966556">
+    <state width="1237" height="216" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605635627118" />
+    <state width="1237" height="216" key="GridCell.Tab.0.right" timestamp="1605635627118">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="216" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605567966556" />
+    <state width="1237" height="216" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605635627118" />
     <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1604730285691">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -414,10 +425,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="477" y="110" key="NewPhpClassDialog/0.0.1280.680@0.0.1280.680" timestamp="1605300526917" />
-    <state x="477" y="264" key="NewPhpFileDialog" timestamp="1604980228918">
+    <state x="477" y="264" key="NewPhpFileDialog" timestamp="1605629267039">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1604980228918" />
+    <state x="477" y="264" key="NewPhpFileDialog/0.0.1280.680@0.0.1280.680" timestamp="1605629267039" />
     <state x="446" y="43" key="RollbackChangesDialog" timestamp="1605431332559">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -426,10 +437,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1604979188476" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1605219566434">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1605568945611">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1605219566434" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1605568945611" />
     <state x="271" y="67" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1604683541677">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

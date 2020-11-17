@@ -8,6 +8,8 @@ require_once "../Model/ClientStatus.php";
 require_once "../Model/AuthTokenResult.php";
 require_once "../Model/AuthorizeResult.php";
 require_once "../Model/AccountsSummaryResult.php";
+require_once "../Model/DaysOfTransactions.php";
+require_once "../Model/AccountsDetailResult.php";
 
 //use Flinks\AuthorizeRequestBody;
 use Exception;
@@ -185,7 +187,7 @@ class FlinksClient
     {
         if (!($this->IsClientStatusAuthorized()))
         {
-            throw new Exception("You can't call GetAccountsSummary when the ClientStatus is not Authorized, you current status is: {$this->GetClientStatus()}.");
+            throw new Exception("You can't call GetAccountsSummary when the ClientStatus is not Authorized, your current status is: {$this->GetClientStatus()}.");
         }
 
         $client = new Client([
@@ -229,7 +231,7 @@ class FlinksClient
     {
         if (!($this->IsClientStatusAuthorized()))
         {
-            throw new Exception("You can't call GetAccountsSummary when the ClientStatus is not Authorized, you current status is: {$this->GetClientStatus()}.");
+            throw new Exception("You can't call GetAccountsSummary when the ClientStatus is not Authorized, your current status is: {$this->GetClientStatus()}.");
         }
 
         $client = new Client([
@@ -257,6 +259,95 @@ class FlinksClient
         if($decoded_response["HttpStatusCode"] == 400)
         {
             $apiResponse = new AccountsSummaryResult($decoded_response["FlinksCode"], null, $decoded_response["HttpStatusCode"],
+                null, null, null, $decoded_response["Message"], null);
+        }
+
+        return $apiResponse;
+    }
+
+    public function GetAccountsDetail(string $requestId, bool $withAccountIdentity = true, bool $withKYC = true, bool $withTransactions = true,
+                                      bool $withBalance = true, array $accountsFilter = null, DaysOfTransactions $daysOfTransactions = null): AccountsDetailResult
+    {
+        if (!($this->IsClientStatusAuthorized()))
+        {
+            throw new Exception("You can't call GetAccountsDetail when the ClientStatus is not Authorized, your current status is: {$this->GetClientStatus()}.");
+        }
+
+        $client = new Client([
+            'base_uri' => $this->BaseUrl,
+        ]);
+
+        $response = $client->request('POST', EndpointConstant::GetAccountsDetail, [
+            "headers" => [
+                "Content-Type" => "application/json"
+            ],
+            'json' => [
+                "RequestId" => $requestId,
+                "WithAccountIdentity" => $withAccountIdentity,
+                "WithKYC" => $withKYC,
+                "WithTransactions" => $withTransactions,
+                "WithBalance" => $withBalance,
+                "AccountsFilter" => $accountsFilter,
+                "DaysOfTransactions" => $daysOfTransactions
+            ],
+            "http_errors" => false
+        ]);
+
+        $this->SetClientStatus($response->getStatusCode());
+
+        $decoded_response = $this->DecodeResponse($response);
+
+        if($decoded_response["HttpStatusCode"] == 200)
+        {
+            $apiResponse = new AccountsDetailResult(null, null, $decoded_response["HttpStatusCode"], $decoded_response["Accounts"],
+                $decoded_response["Login"], $decoded_response["Institution"], null, $decoded_response["RequestId"]);
+        }
+        if($decoded_response["HttpStatusCode"] == 202)
+        {
+            $apiResponse = new AccountsDetailResult($decoded_response["FlinksCode"], $decoded_response["Links"], $decoded_response["HttpStatusCode"],
+                null, null, null, $decoded_response["Message"], $decoded_response["RequestId"]);
+        }
+        if($decoded_response["HttpStatusCode"] == 400)
+        {
+            $apiResponse = new AccountsDetailResult($decoded_response["FlinksCode"], null, $decoded_response["HttpStatusCode"],
+                null, null, null, $decoded_response["Message"], null);
+        }
+
+        return $apiResponse;
+    }
+
+    public function GetAccountsDetailAsync(string $requestId): AccountsDetailResult
+    {
+        if (!($this->IsClientStatusAuthorized()))
+        {
+            throw new Exception("You can't call GetAccountsDetail when the ClientStatus is not Authorized, your current status is: {$this->GetClientStatus()}.");
+        }
+
+        $client = new Client([
+            'base_uri' => $this->BaseUrl,
+        ]);
+
+        $response = $client->request('GET', EndpointConstant::GetAccountsDetailAsync . $requestId, [
+            "http_errors" => false
+        ]);
+
+        $this->SetClientStatus($response->getStatusCode());
+
+        $decoded_response = $this->DecodeResponse($response);
+
+        if($decoded_response["HttpStatusCode"] == 200)
+        {
+            $apiResponse = new AccountsDetailResult(null, null, $decoded_response["HttpStatusCode"], $decoded_response["Accounts"],
+                $decoded_response["Login"], $decoded_response["Institution"], null, $decoded_response["RequestId"]);
+        }
+        if($decoded_response["HttpStatusCode"] == 202)
+        {
+            $apiResponse = new AccountsDetailResult($decoded_response["FlinksCode"], $decoded_response["Links"], $decoded_response["HttpStatusCode"],
+                null, null, null, $decoded_response["Message"], $decoded_response["RequestId"]);
+        }
+        if($decoded_response["HttpStatusCode"] == 400)
+        {
+            $apiResponse = new AccountsDetailResult($decoded_response["FlinksCode"], null, $decoded_response["HttpStatusCode"],
                 null, null, null, $decoded_response["Message"], null);
         }
 
@@ -322,7 +413,8 @@ $response1 = $client2->Authorize("FlinksCapital", "Greatday", "Everyday", true, 
 print_r($response1);
 print("\n");
 //AuthorizeWithLoginId with a 200 status code response
-$response2 = $client2->AuthorizeWithLoginId("e86a6f65-f486-4018-52a6-08d885d6c2f9");
+$array_login = (array) $response1->getLogin();
+$response2 = $client2->AuthorizeWithLoginId($array_login["Id"]);
 print_r($response2);
 print("\n");
 //GenerateAuthorizeToken with a 200 status code response
@@ -336,4 +428,10 @@ $response4 = $client2->GetAccountsSummary($requestId);
 print_r($response4);
 //GetAccountsSummaryAsync with a 200 status code response
 $response5 = $client2->GetAccountsSummaryAsync($requestId);
-print_r($response5);*/
+print_r($response5);
+//GetAccountsDetail with a 200 status code response
+$response6 = $client2->GetAccountsDetail($requestId);
+print_r($response6);
+//GetAccountsDetailAsync with a 200 status code response
+$response7 = $client2->GetAccountsDetailAsync($requestId);
+print_r($response7);*/

@@ -11,7 +11,7 @@ namespace Flinks;
       const Authorize = "BankingServices/Authorize";
       const GetAccountsSummary = "BankingServices/GetAccountsSummary";
       const GetAccountsSummaryAsync = "BankingServices/GetAccountsSummaryAsync/";
-      const GetAccountsDetail = "BankingServices/GetAccountsDetail ";
+      const GetAccountsDetail = "BankingServices/GetAccountsDetail";
       const GetAccountsDetailAsync = "BankingServices/GetAccountsDetailAsync/";
       const GetStatements = "BankingServices/GetStatements";
       const SetScheduledRefresh = "BankingServices/SetScheduledRefresh";
