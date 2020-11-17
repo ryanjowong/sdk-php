@@ -26,13 +26,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22872d6d-254f-41cc-a3ba-4a636f7879ff" name="Default Changelist" comment="Removed foo function">
-      <change afterPath="$PROJECT_DIR$/Flinks/Model/AccountsDetailResult.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Flinks/Model/DaysOfTransactions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flinks/Model/EndpointConstant.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/Model/EndpointConstant.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php-7.4.12/php.ini" beforeDir="false" afterPath="$PROJECT_DIR$/php-7.4.12/php.ini" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +120,7 @@
       <recent name="C:\Users\rjowong\PhpstormProjects\sdk" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.FlinksClient">
+  <component name="RunManager" selected="PHPUnit.FlinksClientTest">
     <configuration name="FlinksClientTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -226,7 +222,15 @@
       <workItem from="1605555229150" duration="5153000" />
       <workItem from="1605568829887" duration="171000" />
       <workItem from="1605625273850" duration="6804000" />
-      <workItem from="1605634215023" duration="1426000" />
+      <workItem from="1605634215023" duration="1575000" />
+      <workItem from="1605644714481" duration="387000" />
+      <workItem from="1605645117846" duration="56000" />
+      <workItem from="1605645273134" duration="43000" />
+      <workItem from="1605645343055" duration="79000" />
+      <workItem from="1605645455042" duration="13000" />
+      <workItem from="1605645517617" duration="15000" />
+      <workItem from="1605645537860" duration="65000" />
+      <workItem from="1605645855912" duration="1304000" />
     </task>
     <task id="LOCAL-00001" summary="Removed foo function">
       <created>1604685101610</created>
@@ -305,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605568931729</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Implemented GetAccountsDetail and Async function with necessary models and tests">
+      <created>1605635741882</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1605635741882</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,7 +361,8 @@
     <MESSAGE value="Added Helper functions and Models (Revamp)" />
     <MESSAGE value="Implemented the AuthTokenResult model in GenerateAuthorizeToken method" />
     <MESSAGE value="Added 400/401 test cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added 400/401 test cases" />
+    <MESSAGE value="Implemented GetAccountsDetail and Async function with necessary models and tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented GetAccountsDetail and Async function with necessary models and tests" />
   </component>
   <component name="WindowStateProjectService">
     <state x="221" y="0" key="#CLI_Interpreters" timestamp="1604957923668">
@@ -389,22 +401,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="283" y="39" key="Github.UntrackedFilesDialog/0.0.1280.680@0.0.1280.680" timestamp="1604683930427" />
-    <state width="1237" height="216" key="GridCell.Tab.0.bottom" timestamp="1605635627118">
+    <state width="1237" height="216" key="GridCell.Tab.0.bottom" timestamp="1605646815987">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="216" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605635627118" />
-    <state width="1237" height="216" key="GridCell.Tab.0.center" timestamp="1605635627118">
+    <state width="1237" height="216" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605646815987" />
+    <state width="1237" height="216" key="GridCell.Tab.0.center" timestamp="1605646815986">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="216" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605635627118" />
-    <state width="1237" height="216" key="GridCell.Tab.0.left" timestamp="1605635627118">
+    <state width="1237" height="216" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605646815986" />
+    <state width="1237" height="216" key="GridCell.Tab.0.left" timestamp="1605646815986">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="216" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605635627118" />
-    <state width="1237" height="216" key="GridCell.Tab.0.right" timestamp="1605635627118">
+    <state width="1237" height="216" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605646815986" />
+    <state width="1237" height="216" key="GridCell.Tab.0.right" timestamp="1605646815986">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="216" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605635627118" />
+    <state width="1237" height="216" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605646815986" />
     <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1604730285691">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -433,14 +445,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="446" y="43" key="RollbackChangesDialog/0.0.1280.680@0.0.1280.680" timestamp="1605431332559" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1604979188476">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1605646914791">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1604979188476" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1605568945611">
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1605646914791" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1605635751659">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1605568945611" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1605635751659" />
     <state x="271" y="67" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1604683541677">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -457,6 +469,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="425" y="58" width="657" height="606" key="com.jetbrains.php.test.PhpNewTestDialog/0.0.1280.680@0.0.1280.680" timestamp="1604722602059" />
+    <state x="441" y="242" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1605645089734">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="441" y="242" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1280.680@0.0.1280.680" timestamp="1605645089734" />
     <state x="297" y="151" key="run.anything.popup" timestamp="1604703928390">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
