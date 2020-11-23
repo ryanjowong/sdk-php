@@ -25,13 +25,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22872d6d-254f-41cc-a3ba-4a636f7879ff" name="Default Changelist" comment="Removed foo function">
-      <change afterPath="$PROJECT_DIR$/Flinks/Model/NumberOfStatements.php" afterDir="false" />
+    <list default="true" id="22872d6d-254f-41cc-a3ba-4a636f7879ff" name="Default Changelist" comment="added functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flinks/Model/DeleteCardResult.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/Model/DeleteCardResult.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flinks/Model/EndpointConstant.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/Model/EndpointConstant.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/Test/FlinksClientTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php-7.4.12/php.ini" beforeDir="false" afterPath="$PROJECT_DIR$/php-7.4.12/php.ini" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +99,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Flinks/SDK" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/php-7.4.12" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -114,13 +111,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lperrone\PhpstormProjects\sdk-php2\php-7.4.12" />
+      <recent name="C:\Users\rjowong\PhpstormProjects\sdk" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rjowong\PhpstormProjects\sdk\Flinks\Test" />
       <recent name="C:\Users\rjowong\PhpstormProjects\sdk\Flinks\SDK" />
       <recent name="C:\Users\rjowong\PhpstormProjects\sdk\Flinks" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\rjowong\PhpstormProjects\sdk" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Script.FlinksClient">

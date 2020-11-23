@@ -190,4 +190,18 @@ class FlinksClientTest extends TestCase
         $this->assertEquals(400, $bad_response->getHttpStatusCode());
         $this->assertEquals(ClientStatus::BAD_REQUEST, $client->GetClientStatus());
     }
+
+    public function test400GetStatements()
+    {
+        $client = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "toolbox");
+        $client->Authorize("FlinksCapital", "Greatday", "Everyday", true, true);
+        $bad_response = $client->GetStatements("883faa95-a3f5-4ff3-98fe-03d5d6b5862a");
+
+        $this->assertEquals(400, $bad_response->getHttpStatusCode());
+        $this->assertNotNull($bad_response->getMessage());
+        $this->assertEquals(ClientStatus::BAD_REQUEST, $client->GetClientStatus());
+    }
+
 }
+
+
