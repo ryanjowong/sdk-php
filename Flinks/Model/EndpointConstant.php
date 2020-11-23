@@ -15,7 +15,7 @@ namespace Flinks;
       const GetAccountsDetailAsync = "BankingServices/GetAccountsDetailAsync/";
       const GetStatements = "BankingServices/GetStatements";
       const SetScheduledRefresh = "BankingServices/SetScheduledRefresh";
-      const DeleteCard = "BankingServices/DeleteCard";
+      const DeleteCard = "BankingServices/DeleteCard/";
       const GetScore = "Insight/login/{LoginId}/score/{RequestId}";
       const GetAttribute = "Insight/login/{LoginId}/attributes/{RequestId}";
       const GenerateAuthorizeToken = "BankingServices/GenerateAuthorizeToken";

@@ -11,6 +11,7 @@ require_once "../Model/AccountsSummaryResult.php";
 require_once "../Model/DaysOfTransactions.php";
 require_once "../Model/AccountsDetailResult.php";
 require_once "../Model/GetStatementsResult.php";
+require_once "../Model/NumberOfStatements.php";
 require_once "../Model/DeleteCardResult.php";
 
 //use Flinks\AuthorizeRequestBody;
@@ -356,7 +357,8 @@ class FlinksClient
         return $apiResponse;
     }
 
-    public function GetStatements(string $requestId, ?string $numberOfStatements, string $secret_key, array $accountsFilter = null): GetStatementsResult
+    public function GetStatements(string $requestId, string $numberOfStatements = "MostRecent",
+                                  string $secret_key = null, array $accountsFilter = null): GetStatementsResult
     {
         $this->IsGetStatementValid($numberOfStatements, $accountsFilter);
 
@@ -400,18 +402,15 @@ class FlinksClient
 
     }
 
-    Public function DeleteCardResult(string $loginId): DeleteCardResult
+    Public function DeleteCard(string $loginId): DeleteCardResult
     {
         $client = new Client([
             'base_uri' => $this->BaseUrl,
         ]);
 
-        $response = $client->request('DELETE', EndpointConstant::DeleteCard . "/" . $loginId, [
+        $response = $client->request('DELETE', EndpointConstant::DeleteCard . $loginId, [
             "headers" => [
                 "Content-Type" => "application/json"
-            ],
-            'json' => [
-                "LoginId" => $loginId
             ],
             "http_errors" => false
         ]);
@@ -436,14 +435,14 @@ class FlinksClient
     //Helper functions
     private function IsGetStatementValid(?string $numberOfStatements, ?array $accountsFilter)
     {
-        if ($numberOfStatements !=null && $numberOfStatements::months12)
+        if ($numberOfStatements != null && $numberOfStatements == NumberOfStatements::Months12)
         {
             if ($accountsFilter == null)
             {
                 throw new Exception("When using NumberOfStatements as Months12, the accounts filter can't be null.");
             }
 
-            if ($accountsFilter["count"] == 0 || $accountsFilter["count"] >= 2)
+            if (count($accountsFilter) == 0 || count($accountsFilter) >= 2)
             {
                 throw new Exception("When using NumberOfStatements as Months12, you have to provide a single accountId on accountsFilter.");
             }
@@ -494,8 +493,6 @@ class FlinksClient
     }
 }
 
-//testcommit
-
 //build to tests
 /*new FlinksClient("","");
 print("\n");
@@ -531,4 +528,8 @@ $response6 = $client2->GetAccountsDetail($requestId);
 print_r($response6);
 //GetAccountsDetailAsync with a 200 status code response
 $response7 = $client2->GetAccountsDetailAsync($requestId);
-print_r($response7);*/
+print_r($response7);
+$response8 = $client2->GetStatements($requestId, NumberOfStatements::MostRecent);
+print_r($response8);
+$response9 = $client2->DeleteCard($array_login["Id"]);
+print_r($response9);*/

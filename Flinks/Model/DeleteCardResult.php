@@ -5,12 +5,12 @@ namespace Flinks;
 class DeleteCardResult
 {
     protected ?int $StatusCode;
-    protected int $HttpStatusCode;
+    protected ?int $HttpStatusCode;
     protected ?string $Token;
     protected ?string $Message;
     protected ?string $FlinksCode;
 
-    public function __construct(int $StatusCode = null, int $HttpStatusCode, string $Token = null, string $Message = null, string $FlinksCode = null)
+    public function __construct(int $StatusCode = null, int $HttpStatusCode = null, string $Token = null, string $Message, string $FlinksCode = null)
     {
         $this->StatusCode = $StatusCode;
         $this->HttpStatusCode = $HttpStatusCode;
