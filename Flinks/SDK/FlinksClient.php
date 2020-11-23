@@ -424,7 +424,7 @@ class FlinksClient
             $apiResponse = new DeleteCardResult($decoded_response["StatusCode"], null, null, $decoded_response["Message"], null);
         }
 
-        if($decoded_response["HttpStatusCode"] == 400)
+        elseif($decoded_response["HttpStatusCode"] == 400)
         {
             $apiResponse = new DeleteCardResult(null, $decoded_response["HttpStatusCode"], null, $decoded_response["Message"], $decoded_response["FlinksCode"]);
         }
