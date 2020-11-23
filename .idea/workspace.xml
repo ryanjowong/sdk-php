@@ -27,8 +27,6 @@
   <component name="ChangeListManager">
     <list default="true" id="22872d6d-254f-41cc-a3ba-4a636f7879ff" name="Default Changelist" comment="Removed foo function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php-7.4.12/php.ini" beforeDir="false" afterPath="$PROJECT_DIR$/php-7.4.12/php.ini" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +228,10 @@
       <workItem from="1605645455042" duration="13000" />
       <workItem from="1605645517617" duration="15000" />
       <workItem from="1605645537860" duration="65000" />
-      <workItem from="1605645855912" duration="1304000" />
+      <workItem from="1605645855912" duration="2206000" />
+      <workItem from="1605815681004" duration="706000" />
+      <workItem from="1605910186441" duration="2172000" />
+      <workItem from="1606102409755" duration="672000" />
     </task>
     <task id="LOCAL-00001" summary="Removed foo function">
       <created>1604685101610</created>
@@ -316,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605635741882</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fixed cacert.pem path in php.ini">
+      <created>1605647499477</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1605647499477</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +370,8 @@
     <MESSAGE value="Implemented the AuthTokenResult model in GenerateAuthorizeToken method" />
     <MESSAGE value="Added 400/401 test cases" />
     <MESSAGE value="Implemented GetAccountsDetail and Async function with necessary models and tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented GetAccountsDetail and Async function with necessary models and tests" />
+    <MESSAGE value="fixed cacert.pem path in php.ini" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed cacert.pem path in php.ini" />
   </component>
   <component name="WindowStateProjectService">
     <state x="221" y="0" key="#CLI_Interpreters" timestamp="1604957923668">
@@ -385,6 +394,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="418" y="253" width="444" height="264" key="ComposerInitDialogKey/0.0.1280.680@0.0.1280.680" timestamp="1604632420772" />
+    <state x="121" y="51" key="DiffContextDialog" timestamp="1606102565836">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="51" key="DiffContextDialog/0.0.1280.680@0.0.1280.680" timestamp="1606102565836" />
     <state x="538" y="91" key="EnvironmentVariablesDialog" timestamp="1604643710112">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -393,6 +406,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1605128034833" />
+    <state x="430" y="208" key="Github.CreatePullRequestDialog" timestamp="1606103049727">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="430" y="208" key="Github.CreatePullRequestDialog/0.0.1280.680@0.0.1280.680" timestamp="1606103049727" />
     <state x="520" y="239" key="Github.ShareDialog" timestamp="1604730923745">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -401,22 +418,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="283" y="39" key="Github.UntrackedFilesDialog/0.0.1280.680@0.0.1280.680" timestamp="1604683930427" />
-    <state width="1237" height="216" key="GridCell.Tab.0.bottom" timestamp="1605646815987">
+    <state width="1237" height="216" key="GridCell.Tab.0.bottom" timestamp="1605648076518">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="216" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605646815987" />
-    <state width="1237" height="216" key="GridCell.Tab.0.center" timestamp="1605646815986">
+    <state width="1237" height="216" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1605648076518" />
+    <state width="1237" height="216" key="GridCell.Tab.0.center" timestamp="1605648076517">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="216" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605646815986" />
-    <state width="1237" height="216" key="GridCell.Tab.0.left" timestamp="1605646815986">
+    <state width="1237" height="216" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1605648076517" />
+    <state width="1237" height="216" key="GridCell.Tab.0.left" timestamp="1605648076517">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="216" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605646815986" />
-    <state width="1237" height="216" key="GridCell.Tab.0.right" timestamp="1605646815986">
+    <state width="1237" height="216" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1605648076517" />
+    <state width="1237" height="216" key="GridCell.Tab.0.right" timestamp="1605648076518">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="216" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605646815986" />
+    <state width="1237" height="216" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1605648076518" />
     <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1604730285691">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -449,10 +466,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1605646914791" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1605635751659">
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1605647512516">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1605635751659" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1605647512516" />
     <state x="271" y="67" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1604683541677">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
