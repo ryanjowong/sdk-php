@@ -10,6 +10,8 @@ require_once "../Model/AuthorizeResult.php";
 require_once "../Model/AccountsSummaryResult.php";
 require_once "../Model/DaysOfTransactions.php";
 require_once "../Model/AccountsDetailResult.php";
+require_once "../Model/GetStatementsResult.php";
+require_once "../Model/DeleteCardResult.php";
 
 //use Flinks\AuthorizeRequestBody;
 use Exception;
@@ -354,7 +356,100 @@ class FlinksClient
         return $apiResponse;
     }
 
+    public function GetStatements(string $requestId, ?string $numberOfStatements, string $secret_key, array $accountsFilter = null): GetStatementsResult
+    {
+        $this->IsGetStatementValid($numberOfStatements, $accountsFilter);
+
+        $client = new Client([
+            'base_uri' => $this->BaseUrl,
+        ]);
+
+        $response = $client->request('POST', EndpointConstant::GetStatements, [
+            "headers" => [
+                'flinks-auth-key' => $secret_key
+            ],
+            'json' => [
+                "RequestId" => $requestId,
+                "NumberOfStatements" => $numberOfStatements,
+                "AccountsFilter" => $accountsFilter
+            ],
+            "http_errors" => false
+        ]);
+
+        $this->SetClientStatus($response->getStatusCode());
+        $decoded_response = $this->DecodeResponse($response);
+
+        if($decoded_response["HttpStatusCode"] == 200)
+        {
+            $apiResponse = new GetStatementsResult(null, null, $decoded_response["HttpStatusCode"], $decoded_response["StatementsByAccount"],
+                $decoded_response["Login"], $decoded_response["Institution"], null, $decoded_response["RequestId"]);
+        }
+
+        if($decoded_response["HttpStatusCode"] == 202)
+        {
+            $apiResponse = new GetStatementsResult($decoded_response["FlinksCode"], $decoded_response["Links"], $decoded_response["HttpStatusCode"],
+                null, null, null,  $decoded_response["Message"], $decoded_response["RequestId"]);
+        }
+        if($decoded_response["HttpStatusCode"] == 400)
+        {
+            $apiResponse = new GetStatementsResult($decoded_response["FlinksCode"], null, $decoded_response["HttpStatusCode"],
+                null, null, null, $decoded_response["Message"], null);
+        }
+
+        return $apiResponse;
+
+    }
+
+    Public function DeleteCardResult(string $loginId): DeleteCardResult
+    {
+        $client = new Client([
+            'base_uri' => $this->BaseUrl,
+        ]);
+
+        $response = $client->request('DELETE', EndpointConstant::DeleteCard . "/" . $loginId, [
+            "headers" => [
+                "Content-Type" => "application/json"
+            ],
+            'json' => [
+                "LoginId" => $loginId
+            ],
+            "http_errors" => false
+        ]);
+
+        $this->SetClientStatus($response->getStatusCode());
+
+        $decoded_response = $this->DecodeResponse($response);
+
+        if($decoded_response["StatusCode"] == 200)
+        {
+            $apiResponse = new DeleteCardResult($decoded_response["StatusCode"], null, null, $decoded_response["Message"], null);
+        }
+
+        if($decoded_response["HttpStatusCode"] == 400)
+        {
+            $apiResponse = new DeleteCardResult(null, $decoded_response["HttpStatusCode"], null, $decoded_response["Message"], $decoded_response["FlinksCode"]);
+        }
+
+        return $apiResponse;
+    }
+
     //Helper functions
+    private function IsGetStatementValid(?string $numberOfStatements, ?array $accountsFilter)
+    {
+        if ($numberOfStatements !=null && $numberOfStatements::months12)
+        {
+            if ($accountsFilter == null)
+            {
+                throw new Exception("When using NumberOfStatements as Months12, the accounts filter can't be null.");
+            }
+
+            if ($accountsFilter["count"] == 0 || $accountsFilter["count"] >= 2)
+            {
+                throw new Exception("When using NumberOfStatements as Months12, you have to provide a single accountId on accountsFilter.");
+            }
+        }
+    }
+
     private function GetBaseUrl(): string
     {
         $endpoint = new EndpointConstant();
@@ -398,6 +493,8 @@ class FlinksClient
         return ($this->ClientStatus == ClientStatus::AUTHORIZED);
     }
 }
+
+//testcommit
 
 //build to tests
 /*new FlinksClient("","");
