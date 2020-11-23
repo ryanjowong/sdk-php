@@ -25,10 +25,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22872d6d-254f-41cc-a3ba-4a636f7879ff" name="Default Changelist" comment="Removed foo function">
+    <list default="true" id="22872d6d-254f-41cc-a3ba-4a636f7879ff" name="Default Changelist" comment="test">
+      <change afterPath="$PROJECT_DIR$/Flinks/Model/DeleteCardResult.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Flinks/Model/GetStatementsResult.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php-7.4.12/php.ini" beforeDir="false" afterPath="$PROJECT_DIR$/php-7.4.12/php.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/Flinks/SDK/FlinksClient.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +100,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Flinks/SDK" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Flinks/Model" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -111,16 +112,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lperrone\PhpstormProjects\sdk-php2\Flinks\Model" />
+      <recent name="C:\Users\rjowong\PhpstormProjects\sdk" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\rjowong\PhpstormProjects\sdk\Flinks\Test" />
       <recent name="C:\Users\rjowong\PhpstormProjects\sdk\Flinks\SDK" />
       <recent name="C:\Users\rjowong\PhpstormProjects\sdk\Flinks" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\rjowong\PhpstormProjects\sdk" />
-    </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.FlinksClientTest">
+  <component name="RunManager" selected="PHP Script.FlinksClient">
     <configuration name="FlinksClientTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -231,6 +233,8 @@
       <workItem from="1605645517617" duration="15000" />
       <workItem from="1605645537860" duration="65000" />
       <workItem from="1605645855912" duration="1304000" />
+      <workItem from="1605816499724" duration="127000" />
+      <workItem from="1606095010265" duration="191000" />
     </task>
     <task id="LOCAL-00001" summary="Removed foo function">
       <created>1604685101610</created>
@@ -316,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605635741882</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="test">
+      <created>1605816570388</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1605816570388</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +373,8 @@
     <MESSAGE value="Implemented the AuthTokenResult model in GenerateAuthorizeToken method" />
     <MESSAGE value="Added 400/401 test cases" />
     <MESSAGE value="Implemented GetAccountsDetail and Async function with necessary models and tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented GetAccountsDetail and Async function with necessary models and tests" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="WindowStateProjectService">
     <state x="221" y="0" key="#CLI_Interpreters" timestamp="1604957923668">
@@ -449,10 +461,11 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1605646914791" />
-    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1605635751659">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="466" y="152" key="Vcs.Push.Dialog.v2" timestamp="1605816575397">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1605635751659" />
+    <state x="466" y="152" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1605816575397" />
     <state x="271" y="67" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1604683541677">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
