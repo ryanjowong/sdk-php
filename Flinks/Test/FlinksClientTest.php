@@ -217,9 +217,7 @@ class FlinksClientTest extends TestCase
     public function testDeleteCard()
     {
         $good_client = new FlinksClient("43387ca6-0391-4c82-857d-70d95f087ecb", "toolbox");
-        $authorized_client = $good_client->Authorize("FlinksCapital", "Greatday", "Everyday", true, true);
-        $array_login = (array) $authorized_client->getLogin();
-        $loginId = $array_login["Id"];
+        $loginId = "6117943d-f9d0-4a3a-b38c-08d88f1492f7";
         $response = $good_client->DeleteCard($loginId);
 
         $this->assertEquals(200, $response->getStatusCode());
